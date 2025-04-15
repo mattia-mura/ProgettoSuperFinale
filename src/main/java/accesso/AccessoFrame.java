@@ -17,11 +17,10 @@ public class AccessoFrame extends JFrame {
   private AccessoUtenteMain aU = new AccessoUtenteMain();
 
   JLabel logo =
-      new JLabel(
-          new ImageIcon(
-              "C:\\Users\\Michele\\Desktop\\mura2tpsit\\" +
-                      "src\\main\\resources\\Logo_MenedorBank.png"));
-
+          new JLabel(
+                  new ImageIcon(
+                          "C:\\Users\\Michele\\Desktop\\mura2tpsit\\"
+                                  + "src\\main\\resources\\Logo_MenedorBank.png"));
   public AccessoFrame() {
     setTitle("Menedor Bank - Accesso");
     setSize(400, 500);
@@ -235,8 +234,8 @@ public class AccessoFrame extends JFrame {
     if (!Tools.controlloPassword(password) || Tools.controlloNomeUtente(username)) {
       JOptionPane.showMessageDialog(
           null,
-          "Username non può avere cartteri speciali (3-16 caratteri) " +
-                  "e password tra 8 e 16 caratteri",
+          "Username non può avere cartteri speciali (3-16 caratteri) "
+                  + "e password tra 8 e 16 caratteri",
           "Errore",
           JOptionPane.ERROR_MESSAGE);
       return;
