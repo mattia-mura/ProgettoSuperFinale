@@ -45,13 +45,15 @@ public class MainFrame extends JFrame {
   }
 
   private static ContoBanca contoVirtuale = new ContoBanca(saldo);
+
   public static ContoBanca getContoBanca() {
     return contoVirtuale;
   }
 
   JLabel logo =
       new JLabel(
-          new ImageIcon("C:\\Users\\Michele\\Desktop\\mura2tpsit\\src\\main\\resources\\Logo_MenedorBank.png"));
+          new ImageIcon(
+              "C:\\Users\\Michele\\Desktop\\mura2tpsit\\src\\main\\resources\\Logo_MenedorBank.png"));
   int nMaxInvestimenti = 5;
   int nInvestimenti = 0;
   Vector<Investimenti> investimenti = new Vector<Investimenti>(5, 0);
@@ -221,8 +223,9 @@ public class MainFrame extends JFrame {
   // Nuova operazione di investimento
   public void nuovoInvestimento() {
     InvestiFrame frameInvestimento = new InvestiFrame();
-    //contoVirtuale.decrementaSaldo(frameInvestimento.getImportoInvestimento());
-    //AccessoUtenteMain.addInfo(AccessoFrame.getDatiUtente()[0], portafoglioSolidi, contoVirtuale, data,frameInvestimento.getImportoInvestimento(),frameInvestimento.getGuadagno(),frameInvestimento.getTempInvestimenti());
+    // contoVirtuale.decrementaSaldo(frameInvestimento.getImportoInvestimento());
+    // AccessoUtenteMain.addInfo(AccessoFrame.getDatiUtente()[0], portafoglioSolidi, contoVirtuale,
+    // data,frameInvestimento.getImportoInvestimento(),frameInvestimento.getGuadagno(),frameInvestimento.getTempInvestimenti());
     aggiornaUI();
   }
 
@@ -299,6 +302,5 @@ public class MainFrame extends JFrame {
     contoBancario.decrementaSaldo(soldi);
     contoBancario.aumentaSaldo(money);
     return true;
-  }//addInvestimentoo
-
+  } // addInvestimentoo
 }

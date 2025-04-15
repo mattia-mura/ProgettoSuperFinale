@@ -16,7 +16,10 @@ public class AccessoFrame extends JFrame {
   private static String[] datiUtente = new String[2];
   private AccessoUtenteMain aU = new AccessoUtenteMain();
 
-  JLabel logo = new JLabel(new ImageIcon("C:\\Users\\Michele\\Desktop\\mura2tpsit\\src\\main\\resources\\Logo_MenedorBank.png"));//"/src/main/resources/Logo_MenedorBank.png"));
+  JLabel logo =
+      new JLabel(
+          new ImageIcon(
+              "C:\\Users\\Michele\\Desktop\\mura2tpsit\\src\\main\\resources\\Logo_MenedorBank.png")); // "/src/main/resources/Logo_MenedorBank.png"));
 
   public AccessoFrame() {
     setTitle("Menedor Bank - Accesso");

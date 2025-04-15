@@ -36,30 +36,56 @@ public class Transizioni extends JFrame {
     pannello.add(scrollPane, gbc);
 
     // Leggi il contenuto del file e mostrane le righe
-    try (BufferedReader reader = new BufferedReader(new FileReader("CartellaUtenti/"+nomeFile+".csv"))) {
+    try (BufferedReader reader =
+        new BufferedReader(new FileReader("CartellaUtenti/" + nomeFile + ".csv"))) {
       String linea;
 
       while ((linea = reader.readLine()) != null) {
 
-        String [] array = linea.split(";");
+        String[] array = linea.split(";");
         if (array.length > 5) {
           double s = Double.parseDouble(array[5]);
           double g = Double.parseDouble(array[6]);
           String aggiornata;
-          //personificazione stringa output (tralascio il conto banca e portafoglio oltre alla durata, per una questione di spazi e ordine
-          if ( (s<0) && (g<0) ){
-            aggiornata = "data:" + array[2] + "/" + array[3] + "/" + array[4] + " nessun investimento :( /// portafoglio:"+ array[0] + " conto bancario:" + array[1];
-          }else {
-            aggiornata = "data:" + array[2] + "/" + array[3] + "/" + array[4] + " importo:" + array[5] + " guadagno:" + array[6] + " /// portafoglio:" + array[0] + " conto bancario:" + array[1];
+          // personificazione stringa output (tralascio il conto banca e portafoglio oltre alla
+          // durata, per una questione di spazi e ordine
+          if ((s < 0) && (g < 0)) {
+            aggiornata =
+                "data:"
+                    + array[2]
+                    + "/"
+                    + array[3]
+                    + "/"
+                    + array[4]
+                    + " nessun investimento :( /// portafoglio:"
+                    + array[0]
+                    + " conto bancario:"
+                    + array[1];
+          } else {
+            aggiornata =
+                "data:"
+                    + array[2]
+                    + "/"
+                    + array[3]
+                    + "/"
+                    + array[4]
+                    + " importo:"
+                    + array[5]
+                    + " guadagno:"
+                    + array[6]
+                    + " /// portafoglio:"
+                    + array[0]
+                    + " conto bancario:"
+                    + array[1];
           }
-          areaTesto.append(aggiornata + "\n");//(linea + "\n");
-        }else{areaTesto.append(linea + "\n");}
-
+          areaTesto.append(aggiornata + "\n"); // (linea + "\n");
+        } else {
+          areaTesto.append(linea + "\n");
         }
+      }
     } catch (IOException e) {
       areaTesto.setText("Errore nella lettura del file: " + e.getMessage());
     }
-
 
     add(pannello);
     setVisible(true);
