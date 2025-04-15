@@ -52,9 +52,9 @@ public class MainFrame extends JFrame {
 
   JLabel logo =
       new JLabel(
-              new ImageIcon(
+          new ImageIcon(
               "C:\\Users\\Michele\\Desktop\\mura2tpsit\\"
-                      + "src\\main\\resources\\Logo_MenedorBank.png"));
+                  + "src\\main\\resources\\Logo_MenedorBank.png"));
   int nMaxInvestimenti = 5;
   int nInvestimenti = 0;
   Vector<Investimenti> investimenti = new Vector<Investimenti>(5, 0);
