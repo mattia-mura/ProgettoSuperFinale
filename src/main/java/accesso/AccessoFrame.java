@@ -19,7 +19,8 @@ public class AccessoFrame extends JFrame {
   JLabel logo =
       new JLabel(
           new ImageIcon(
-              "C:\\Users\\Michele\\Desktop\\mura2tpsit\\src\\main\\resources\\Logo_MenedorBank.png")); // "/src/main/resources/Logo_MenedorBank.png"));
+              "C:\\Users\\Michele\\Desktop\\mura2tpsit\\" +
+                      "src\\main\\resources\\Logo_MenedorBank.png"));
 
   public AccessoFrame() {
     setTitle("Menedor Bank - Accesso");
@@ -40,7 +41,7 @@ public class AccessoFrame extends JFrame {
     //        if (imgURL != null) {
     //            logo = new JLabel(new ImageIcon(imgURL));
     //        } else {
-    //            System.out.println("ERRORE: Immagine non trovata con getClassLoader!");
+    //    System.out.println("ERRORE: Immagine non trovata con getClassLoader!");
     //        }
 
     gbc.gridx = 0;
@@ -234,7 +235,8 @@ public class AccessoFrame extends JFrame {
     if (!Tools.controlloPassword(password) || Tools.controlloNomeUtente(username)) {
       JOptionPane.showMessageDialog(
           null,
-          "Username non può avere cartteri speciali (3-16 caratteri) e password tra 8 e 16 caratteri",
+          "Username non può avere cartteri speciali (3-16 caratteri) " +
+                  "e password tra 8 e 16 caratteri",
           "Errore",
           JOptionPane.ERROR_MESSAGE);
       return;
